@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script type = "text/javascript" src = "https://d3js.org/d3.v6.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Next Word Prediction </title>
+
+  <style>
+body{
+  background-color:#FAEBD7;
+  }
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li{
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+div{
+position:
+}
+
+.typing
+{
+   color: #4169E1;
+   overflow: hidden;
+   white-space: nowrap;
+   letter-spacing: 0.15em;
+   border-right: 0.15em solid red;
+   animation: typing 7.5s steps(40, end) infinite, cursor-blink 3.75s step-end infinite;
+}
+@keyframes typing {
+from {
+    width: 0;
+}
+to {
+   width: 100%;
+}
+}
+@keyframes cursor-blink {
+from,
+to {
+   border-color: transparent;
+}
+30%
+{
+   border-color: red;
+}
+}
+
+button {
+  background-color: #4682B4;
+  width: 150px;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid #191970;
+  color: white;
+  cursor: pointer;
+}
+.column {
+float: left;
+width: 50%;
+padding: 10px;
+height: 300px
+}
+.row:after {
+content: "";
+display : table;
+clear: both;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#">Home</a></li>
+  <li><a href="/about.html">About us</a></li>
+  <li><a href="/project.html">Project Details</a></li>
+
+</ul>
+<h1  class="typing" align="right">Welcome to the next word prediction</h1>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="column">
+        <form action='/load' method='get'>
+            <span id="value"> </span>
+            <Input class="range" type="range"  value="9" min="1" max="10" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"> </input>
+
+            <script type="text/javascript">
+                function rangeSlide(value) {
+                document.getElementById('value').innerHTML = value;
+            }
+           </script>
+            <textarea name='text' rows="3" cols="40" placeholder="Enter here ..." style='margin: 0px; width: 721px; height: 60px;'></textarea><br>
+            <button type='submit'> Analyze Text</button>
+            <button onclick="showplot()" type='button'>show Plot</button>
+        </form>
+       <br>
+        <h2> Result </h2>
+        {{N}}
+        <p>Next possible  word will be :- <b> {{Gtext}} </b> </p>
+    </div>
+    <div class="colum">
+    <canvas id="myChart" style="width:150%;max-width:700px"> </canvas>
+    <!--<<canvas id="myChart" style="width:100%;max-width:600px"> </canvas>-->
+    </div>
+<!--    <p>Next possible  word will be :- <b> {{Gtext}} </b> </p>-->
+</div>
+<!--<div id="bargraph" align="right">-->
+<!--    <canvas id="myChart" style="width:100%;max-width:600px"> </canvas>-->
+
+<!--</div>-->
+
+<script>
+
+function wordplot()
+{
+}
+function barplot()
+{
+var xValues = {{XPlot|safe }};
+var yValues = {{YPlot|safe }};
+
+new Chart("myChart", {
+   type: "horizontalBar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: "blue",
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {
+      display: false,
+      position: 'top'
+    },
+    title: {
+      display: true,
+      text: "Word Frequency Count"
+
+    }
+  }
+});
+}
+function showplot()
+{
+barplot()
+}
+</script>
+
+</body>
+
+
+</html>

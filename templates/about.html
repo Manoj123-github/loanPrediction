@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about us </title>
+<style>
+body{
+  background-color:#FAEBD7;
+  }
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li{
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.column {
+float: left;
+width: 25%;
+height: 200px;
+}
+.row:after {
+content: "";
+display : table;
+clear: both;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+</style>
+</head>
+<body>
+
+  <nav>
+      <ul class="nav_links">
+          <li> <a href='{{ url_for('homePage')}}'>Home</a></li>
+          <li> <a href='{{ url_for('AboutPage')}}'>About</a> </li>
+          <li> <a href='{{ url_for('PredictPage')}}'>Predict</a> </li>
+      </ul>
+  </nav>
+  <h1 align="center">Project:- Loan Prediction </h1>
+<br>
+  <br>
+
+<div>
+    <h2 align="center"> Name : Manoj Yadav</h2>
+    <h2 align="center">Contact : 9137281662</h2>
+    <h2 align="center">Email : manoj.h.yadav1002@gmail.com</h2>
+    <h2 align="center"><a href="linkedin.com/in/manoj-yadav-1002">Linkedin</a></h2>
+    <h2 align="center"> <a href="https://github.com/Manoj123-github">Github </a> </h2>
+</div>
+
+
+</body>
+</html>

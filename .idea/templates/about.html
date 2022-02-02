@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about us </title>
+<style>
+body{
+  background-color:#FAEBD7;
+  }
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li{
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.column {
+float: left;
+width: 25%;
+height: 200px;
+}
+.row:after {
+content: "";
+display : table;
+clear: both;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="{% url 'index' %}">Home</a></li>
+  <li><a class="active" href="#">About us</a></li>
+  <li><a href="/project.html">Project Details</a></li>
+
+</ul>
+
+<h1 align="center">Project:- Next Word Prediction </h1>
+<h2 align="center"><b><u>Our Team </u></b></h2>
+
+<div class="row">
+    <div class="column" style="background-color:#F0F8FF">
+
+            <p><b>Name :-</b> Ritvik Kanchan </p>
+            <p><b>Roll No.:-</b> 05</p>
+            <p><b>Class :-</b>DSAI</p>
+            <p><b>for more info <a href="https://www.linkedin.com/in/ritvik-kanchan-2794831bb/">Click Here </a></b></p>
+
+
+    </div>
+    <div class="column" style="background-color:#F0F8FF">
+
+            <p><b>Name :-</b> Manoj Yadav </p>
+            <p><b>Roll No.:-</b> 17</p>
+            <p><b>Class :-</b>DSAI</p>
+            <p><b>for more info <a href="https://www.linkedin.com/in/manoj-yadav-1002">Click Here </a></b></p>
+
+    </div>
+    <div class="column" style="background-color:#F0F8FF">
+
+            <p><b>Name :-</b> Shreya Sanjay Shinde </p>
+            <p><b>Roll No.:-</b> 22</p>
+            <p><b>Class :-</b>DSAI</p>
+            <p><b>for more info <a href="https://www.linkedin.com/in/shreya-shinde8/">Click Here </a></b></p>
+
+    </div>
+    <div class="column" style="background-color:#F0F8FF">
+
+            <p><b>Name :-</b> Apeksha Singh</p>
+            <p><b>Roll No.:-</b>...</p>
+            <p><b>Class :-</b>DSAI</p>
+            <p><b>for more info <a href="#">Click Here </a></b></p>
+
+    </div>
+</div>
+
+<h3 align="center">Github</h3>
+<h4 align="center"> <a href="https://github.com/Manoj123-github">Click</a> </h4>
+</body>
+</html>

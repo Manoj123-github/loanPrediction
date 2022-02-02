@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+<style>
+body{
+  background-color:#FAEBD7;
+  }
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li{
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+div{
+position:
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="{% url 'index' %} ">Home</a></li>
+  <li><a href="/about.html">About us</a></li>
+    <li><a class="active" href="#">Project Details</a></li>
+</ul>
+<div>
+    <h1> Project details ... </h1>
+
+</div>
+</body>
+</html>

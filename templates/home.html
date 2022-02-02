@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+	<style>
+		body{
+  background-color:#FAEBD7;
+  }
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li{
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.column {
+float: left;
+width: 25%;
+height: 200px;
+}
+.row:after {
+content: "";
+display : table;
+clear: both;
+}
+p {
+display: block;
+margin-top : 1em;
+margin-bottom : 1em;
+margin-left : 0;
+margin-right: 0;
+font-size: 25px
+}
+pre{
+font-size : 15px
+}
+</style>
+</head>
+<body>
+<div class="nav">
+ <nav>
+	 <ul class="nav_links">
+		 <li> <a href='{{ url_for('homePage')}}'>Home</a></li>
+		 <li> <a href='{{ url_for('AboutPage')}}'>About</a> </li>
+		 <li> <a href='{{ url_for('PredictPage')}}'>Predict</a> </li>
+	 </ul>
+</nav>
+</div>
+<div class="heading">
+<h1 align="center">Project:- Loan Prediction </h1>
+
+  <div>
+	  <div> <h2>&nbsp; &nbsp;&nbsp;<u>Introuction </u></h2>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The idea is to build a web page based model that will predict the loan approval of an applicant
+                who has applied for a loan. The loan eligibility process (real time) based on customer detail provided
+                while filling online application form. These details are Gender, Marital Status, Education,
+				Number of Dependents, Income, Loan Amount, Credit History and others.</p>
+          <pre> <h3>The data consists of the following rows:</h3>
+                Loan_ID : Unique Loan ID
+                Gender : Male/ Female
+                Married : Applicant married (Y/N)
+                Dependents : Number of dependents
+                Education : Applicant Education (Graduate/ Under Graduate)
+                Self_Employed : Self employed (Y/N)
+                ApplicantIncome : Applicant income
+                CoapplicantIncome : Coapplicant income
+                LoanAmount : Loan amount in thousands of dollars
+                Loan_Amount_Term : Term of loan in months
+                Credit_History : credit history meets guidelines yes or no
+                Property_Area : Urban/ Semi Urban/ Rural
+                Loan_Status : Loan approved (Y/N) this is the target variable</pre>
+      </div>
+      <div>
+          <h1 align="center">  <a href='{{ url_for('PredictPage')}}'> Click here to ckeck your loan eligibility</a> </h1>
+      </div>
+</div>
+</div>
+</body>
+</html>
